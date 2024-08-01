@@ -23,7 +23,7 @@ class AdapterPost(val body: List<Post>, val context:Context):RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         val body=body[position]
-        holder.binding.tittle.text=body.tittle
+        holder.binding.tittle.text=body.title
         holder.binding.id.text=body.id.toString()
         holder.binding.user.text=body.userId.toString()
         holder.binding.body.text=body.body
