@@ -1,5 +1,12 @@
 package com.brendakhamali.checkposts
 
+import android.content.Context
+import android.content.Intent
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.brendakhamali.checkposts.databinding.PostListItemBinding
+
 //class AdapterPosts {
 //}
 
