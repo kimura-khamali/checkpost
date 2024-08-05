@@ -3,50 +3,95 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#9C27B0"
+    android:layout_margin="22sp"
+    android:padding="8dp">
 
     <TextView
         android:id="@+id/tvCommentName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:textSize="16sp"
+        android:textColor="#1E88E5"
+        android:textSize="22sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:text="Comment Name"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/tvCommentBody"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvCommentName"
-        android:layout_margin="8dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvCommentEmail"
-        tools:layout_editor_absoluteY="-2dp"
-        tools:text="Comment Body"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toStartOf="@+id/tvCommentEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Comment Name" />
 
     <TextView
         android:id="@+id/tvCommentEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvCommentBody"
-        android:layout_margin="8dp"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/tvCommentName"
-        tools:layout_editor_absoluteY="0dp"
-        tools:text="Comment Email"
-        tools:ignore="MissingConstraints" />
+        android:textColor="#4CAF50"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Comment Email" />
+
+    <TextView
+        android:id="@+id/tvCommentBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#212121"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCommentName"
+        tools:text="Comment Body" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+
+
+
+
+
+
+
 <!--<?xml version="1.0" encoding="utf-8"?>-->
+
+
 <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
 <!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent">-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="8dp">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCommentName"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/tvCommentEmail"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:text="Comment Name" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCommentEmail"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:text="Comment Email" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCommentBody"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:textSize="17sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tvCommentName"-->
+<!--        tools:text="Comment Body" />-->
 
 <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

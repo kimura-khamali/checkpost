@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.brendakhamali.checkposts.databinding.PostListItemBinding
 
-//class AdapterPosts {
-//}
+
 
 class AdapterPost(val body: List<Post>, val context:Context):RecyclerView.Adapter<PostViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
@@ -29,7 +28,8 @@ class AdapterPost(val body: List<Post>, val context:Context):RecyclerView.Adapte
         holder.binding.body.text=body.body
         holder.binding.clPost.setOnClickListener{
             val intent = Intent(context,CommentsActivity::class.java)
-            intent.putExtra("POST_ID", body.id)
+            intent.putExtra("POST_ID", body
+                .id)
             context.startActivity(intent)
         }
     }
