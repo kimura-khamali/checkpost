@@ -1,4 +1,4 @@
-package com.brendakhamali.checkposts
+package com.brendakhamali.checkposts.model
 
 data class Comments(
     val postId:Int,

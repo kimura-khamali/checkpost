@@ -1,8 +1,9 @@
-package com.brendakhamali.checkposts
+package com.brendakhamali.checkposts.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.brendakhamali.checkposts.model.Comments
 import com.brendakhamali.checkposts.databinding.CommentListItemBinding
 
 

@@ -1,4 +1,4 @@
-package com.brendakhamali.checkposts
+package com.brendakhamali.checkposts.ui
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.brendakhamali.checkposts.databinding.PostListItemBinding
-
+import com.brendakhamali.checkposts.model.Post
 
 
 class AdapterPost(val body: List<Post>, val context:Context):RecyclerView.Adapter<PostViewHolder>(){
@@ -27,7 +27,7 @@ class AdapterPost(val body: List<Post>, val context:Context):RecyclerView.Adapte
         holder.binding.user.text=body.userId.toString()
         holder.binding.body.text=body.body
         holder.binding.clPost.setOnClickListener{
-            val intent = Intent(context,CommentsActivity::class.java)
+            val intent = Intent(context, CommentsActivity::class.java)
             intent.putExtra("POST_ID", body
                 .id)
             context.startActivity(intent)

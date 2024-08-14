@@ -1,4 +1,4 @@
-package com.brendakhamali.checkposts
+package com.brendakhamali.checkposts.api
 
 
 import retrofit2.Retrofit

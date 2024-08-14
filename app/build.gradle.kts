@@ -48,7 +48,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.4")
+    implementation ("androidx.activity:activity-ktx:1.9.1")
 }
