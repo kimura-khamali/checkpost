@@ -13,6 +13,7 @@ class AdapterComments(var comments: List<Comments>) : RecyclerView.Adapter<Comme
         return CommentViewHolder(binding)
     }
 
+
     override fun getItemCount(): Int {
         return comments.size
     }

@@ -9,9 +9,11 @@ import com.brendakhamali.checkposts.databinding.PostListItemBinding
 import com.brendakhamali.checkposts.model.Post
 
 
-class AdapterPost(val body: List<Post>, val context:Context):RecyclerView.Adapter<PostViewHolder>(){
+class AdapterPost(val body: List<Post>, val context: Context) :
+    RecyclerView.Adapter<PostViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-        val binding=PostListItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding =
+            PostListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PostViewHolder(binding)
     }
 
@@ -21,20 +23,21 @@ class AdapterPost(val body: List<Post>, val context:Context):RecyclerView.Adapte
 
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        val body=body[position]
-        holder.binding.tittle.text=body.title
-        holder.binding.id.text=body.id.toString()
-        holder.binding.user.text=body.userId.toString()
-        holder.binding.body.text=body.body
-        holder.binding.clPost.setOnClickListener{
+        val body = body[position]
+        holder.binding.tittle.text = body.title
+        holder.binding.id.text = body.id.toString()
+        holder.binding.user.text = body.userId.toString()
+        holder.binding.body.text = body.body
+        holder.binding.clPost.setOnClickListener {
             val intent = Intent(context, CommentsActivity::class.java)
-            intent.putExtra("POST_ID", body
-                .id)
+            intent.putExtra(
+                "POST_ID", body.id
+            )
             context.startActivity(intent)
         }
     }
 }
 
-class PostViewHolder(var binding: PostListItemBinding):RecyclerView.ViewHolder(binding.root){
+class PostViewHolder(var binding: PostListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
 }
